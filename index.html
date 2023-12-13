@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Birthday Present</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #birthdayCard {
+            background-color: #ffd700;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #surpriseButton {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="birthdayCard">
+        <h1>Happy Birthday Soumita!</h1>
+        <p>Wishing you a day filled with joy and laughter.</p>
+        <button id="surpriseButton">Click for a Surprise!</button>
+        <audio id="birthdayAudio" src="hpb.mp3"></audio>
+    </div>
+
+    <script>
+        const surpriseButton = document.getElementById('surpriseButton');
+        const birthdayAudio = document.getElementById('birthdayAudio');
+
+        surpriseButton.addEventListener('click', () => {
+            // Show a surprise message
+            alert("Here is a song by 🍪");
+
+            // Play birthday audio
+            birthdayAudio.play();
+        });
+    </script>
+</body>
+</html>
